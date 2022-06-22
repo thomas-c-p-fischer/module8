@@ -16,6 +16,8 @@ public class Main {
 		
 		/**
 		 * Boucle qui va permettre de jouer tant que l'un des 2 n'atteint pas 3 manches gagnantes
+		 * Avec condition associant la saisie du joueur "choixUser" à un des 3 choix
+		 * Ensuite utilisation des méthodes créent dans la classe Jeu
 		 */
 		do {
 			System.out.println("Choississez entre CISEAUX (0), FEUILLE (1), PIERRE (2).");
