@@ -16,56 +16,57 @@ public class Jeu {
 		if (user == ia) {
 
 		}
-		if (user == Choix.CISEAUX && ia == Choix.FEUILLE) {
+		if (user == user.CISEAUX && ia == ia.FEUILLE) {
 			this.scoreJoueur++;
 		}
-		if (user == Choix.FEUILLE && ia == Choix.CISEAUX) {
+		if (user == user.FEUILLE && ia == ia.CISEAUX) {
 			this.scoreOrdi++;
 		}
-		if (user == Choix.CISEAUX && ia == Choix.PIERRE) {
+		if (user == user.CISEAUX && ia == ia.PIERRE) {
 			this.scoreOrdi++;
 		}
-		if (user == Choix.PIERRE && ia == Choix.CISEAUX) {
+		if (user == user.PIERRE && ia == ia.CISEAUX) {
 			this.scoreJoueur++;
 		}
-		if (user == Choix.FEUILLE && ia == Choix.PIERRE) {
+		if (user == user.FEUILLE && ia == ia.PIERRE) {
 			this.scoreJoueur++;
 		}
-		if (user == Choix.PIERRE && ia == Choix.FEUILLE) {
+		if (user == user.PIERRE && ia == ia.FEUILLE) {
 			this.scoreOrdi++;
 		}
 		System.out.println("Le score du joueur est " + this.scoreJoueur + ", le score de l'IA est " + this.scoreOrdi);
 	}
 
-	public void ordinateur(int choixOrdi) {
+	public Choix ordinateur() {
 		Random random = new Random();
-		Choix ia;
-		choixOrdi = random.nextInt(3);
-		if (choixOrdi == 0) {
+		Choix ia = null;
+		int choixAi;
+		choixAi = random.nextInt(3);
+		
+		
+		if (choixAi == 0) {
 			ia = Choix.CISEAUX;
-		} else if (choixOrdi == 1) {
+		} else if (choixAi == 1) {
 			ia = Choix.FEUILLE;
-		} else if (choixOrdi == 2) {
+		} else if (choixAi == 2) {
 			ia = Choix.PIERRE;
 		}
-		System.out.println(choixOrdi);
+		return ia;
 	}
-
+	
+	public void score() {
+			
+			System.out.println("Score ordinateur = " + this.scoreOrdi + " Score utilisateur = " + this.scoreJoueur);
+			
+			
+		}
+	
 	public int getScoreJoueur() {
 		return scoreJoueur;
-	}
-
-	public void setScoreJoueur(int scoreJoueur) {
-		this.scoreJoueur = scoreJoueur;
 	}
 
 	public int getScoreOrdi() {
 		return scoreOrdi;
 	}
-
-	public void setScoreOrdi(int scoreOrdi) {
-		this.scoreOrdi = scoreOrdi;
-	}
-	
 	
 }
