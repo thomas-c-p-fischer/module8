@@ -9,8 +9,8 @@ public class Jeu {
 
 	/**
 	 * @author Stagiaire FISCHER
-	 * @param choix1 représente le choix utilisateur
-	 * @param choix2 représente le choix ordinateur
+	 * @param user représente le choix utilisateur
+	 * @param ia représente le choix ordinateur
 	 * @param le score affécté
 	 */
 	public void comparerChoix(Choix user, Choix ia) {
