@@ -39,7 +39,7 @@ public class Jeu {
 	}
 
 	/**
-	 * Condition associant les chiffres random parcouruent aux 3 choix du jeu
+	 * @Choix Condition associant les chiffres random parcouruent aux 3 choix du jeu
 	 * @return Le choix aléatoire de l'ordinateur
 	 */
 	public Choix ordinateur() {
